@@ -25,3 +25,4 @@ INSTALLING
 **********
 
         # cp follow /usr/local/bin
+        # cp doc/follow.1 /usr/local/man/man1
