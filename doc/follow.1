@@ -1,24 +1,26 @@
 .mso www.tmac
-
-.TH FOLLOW 1 "2012 Feb 27"
+.TH FOLLOW 1 "2012 Feb 28"
 
 .SH NAME
-follow \(en standalone version of \fBtail(1) -f\fP
+\fBfollow\fR \(en standalone version of \fBtail -f\fR
 
-.SH SYNPOSIS
-\fBfollow\fP FILENAME
+.SH SYNOPSIS
+\fBfollow\fR \fIFILENAME\fR
 
 .SH DESCRIPTION
-\fBfollow\fP is a standalone version of \fBtail(1) -f\fR which also
-displays the text that is already contained by the input file.
+\fBfollow\fR is a standalone version of \fBtail(1) -f\fR which echoes
+the whole file before it starts to follow.
+
+It outputs data which was appended to the specified file as the file
+grows.  This can, for example, be useful when monitoring log files.
 
 .SH OPTIONS
 .PP
-FILENAME
-.RS 4
+.I FILENAME
+.RS
 The filename of the file which should be followed.
 .RE
 
 .SH BUGS
 If you hit upon any bug, please report it to the developers at
-.URL "https://github.com/dermesser/follow/issues" "the issue tracker" "."
+.URL https://github.com/dermesser/follow/issues "the issue tracker" .

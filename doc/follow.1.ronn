@@ -1,12 +1,16 @@
-follow(1) -- standalone version of `tail(1) -f`
+follow(1) -- standalone version of `tail -f`
 ===============================================
 
 ## SYNOPSIS
 `follow` <FILENAME>
 
 ## DESCRIPTION
-`follow` is a standalone version of `tail(1) -f` which also
-displays the text that is already contained by the input file.
+`follow` is a standalone version of `tail(1) -f` which echoes
+the whole file before it starts to follow.
+
+It outputs data which was appended to the specified file as the
+file grows.  This can, for example, be useful when monitoring
+log files.
 
 ## OPTIONS
   * <FILENAME>:
