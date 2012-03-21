@@ -1,5 +1,4 @@
-follow(1) -- standalone version of `tail -f`
-===============================================
+# follow(1) -- standalone version of `tail -f`
 
 ## SYNOPSIS
 `follow` <FILENAME>
