@@ -1,10 +1,10 @@
-# follow(1) -- standalone version of `tail -f`
+# follow(1) -- standalone version of tail -f
 
 ## SYNOPSIS
 `follow` <FILENAME>
 
 ## DESCRIPTION
-`follow` is a standalone version of `tail(1) -f` which echoes
+`follow` is a standalone version of `tail`(1) -f which echoes
 the whole file before it starts to follow.
 
 It outputs data which was appended to the specified file as the

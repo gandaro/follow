@@ -1,15 +1,19 @@
 .mso www.tmac
-.TH FOLLOW 1 "2012 Feb 28"
+.TH FOLLOW 1 "2012-04-06"
 
 .SH NAME
-\fBfollow\fR \(en standalone version of \fBtail -f\fR
+.B follow
+\(en standalone version of tail -f
 
 .SH SYNOPSIS
-\fBfollow\fR \fIFILENAME\fR
+.B follow
+.I FILENAME
 
 .SH DESCRIPTION
-\fBfollow\fR is a standalone version of \fBtail(1) -f\fR which echoes
-the whole file before it starts to follow.
+.B follow
+is a standalone version of
+.BR tail (1)
+-f which echoes the whole file before it starts to follow.
 
 It outputs data which was appended to the specified file as the file
 grows.  This can, for example, be useful when monitoring log files.
@@ -22,3 +26,6 @@ The filename of the file which should be followed.
 .SH BUGS
 If you hit upon any bug, please report it to the developers at
 .URL https://github.com/dermesser/follow/issues "the issue tracker" .
+
+.SH "SEE ALSO"
+.BR tail (1) .
