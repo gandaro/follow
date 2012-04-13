@@ -17,6 +17,11 @@ void errexit(const char* str, ...)
         vfprintf(stderr,str,args);
         va_end(args);
 
+        if ( errno )
+                fprintf(stderr,": %s",strerror(errno));
+
+        fputs("\n",stderr);
+
         exit(1);
 }
 
@@ -29,13 +34,13 @@ int main(int argc, char** argv)
         struct inotify_event evt;
 
         if ( (notify = inotify_init()) == -1 )
-                errexit("follow: %s\n",strerror(errno));
+                errexit("follow: couldn't initialize inotify");
 
         if ( argc != 2 )
-                errexit("Usage: %s FILENAME\n",argv[0]);
+                errexit("Usage: %s FILENAME",argv[0]);
 
         if ( -1 == (fd = open(path,O_RDONLY)) )
-                errexit("follow: %s\n",strerror(errno));
+                errexit("follow: couldn't open file");
 
         while ( readchars > 0 )
         {
